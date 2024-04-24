@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * Token 의 경우 2000번대 에러코드 사용
  */
-@AllArgsConstructor
+/*@AllArgsConstructor
 @Getter
 public enum TokenErrorCode implements ErrorCodeIfs{
 
@@ -22,4 +22,4 @@ public enum TokenErrorCode implements ErrorCodeIfs{
     private final Integer httpStatusCode;
     private final Integer errorCode;
     private final String description;
-}
+}*/
