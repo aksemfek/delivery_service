@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.codec.json.Jackson2JsonEncoder;
 
-@Configuration
+/*@Configuration
 public class RabbitMqConfig {
 
     @Bean
@@ -46,4 +46,4 @@ public class RabbitMqConfig {
     public MessageConverter messageConverter(ObjectMapper objectMapper){
         return new Jackson2JsonMessageConverter(objectMapper);
     }
-}
+}*/
