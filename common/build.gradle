@@ -1,5 +1,8 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     id 'java'
+    id 'org.jetbrains.kotlin.jvm'
 }
 
 group 'org.delivery'
@@ -24,4 +27,10 @@ test {
 
 jar {
     enabled = true
+}
+tasks.withType(KotlinCompile) {
+    kotlinOptions {
+        freeCompilerArgs += '-Xjsr305=strict'
+        jvmTarget = '11'
+    }
 }
