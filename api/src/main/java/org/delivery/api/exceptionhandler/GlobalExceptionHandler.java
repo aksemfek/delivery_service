@@ -1,7 +1,7 @@
 package org.delivery.api.exceptionhandler;
 
 import lombok.extern.slf4j.Slf4j;
-import org.delivery.api.common.api.Api;
+import org.delivery.common.api.Api;
 import org.delivery.common.error.ErrorCode;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.ResponseEntity;

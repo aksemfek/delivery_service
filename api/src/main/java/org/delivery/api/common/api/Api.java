@@ -1,4 +1,4 @@
-package org.delivery.api.common.api;
+//package org.delivery.common.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import org.delivery.common.error.ErrorCodeIfs;
 
 import javax.validation.Valid;
 
-@Data
+/*@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Api<T> {
@@ -47,4 +47,4 @@ public class Api<T> {
         api.result = Result.ERROR(errorCodeIfs, description);
         return api;
     }
-}
+}*/
