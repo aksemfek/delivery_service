@@ -1,4 +1,4 @@
-package org.delivery.api.common.api;
+/*package org.delivery.common.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -48,4 +48,4 @@ public class Result {
             .resultDescription(description)
             .build();
     }
-}
+}*/
