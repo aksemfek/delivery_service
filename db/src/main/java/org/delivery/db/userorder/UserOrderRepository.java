@@ -1,3 +1,4 @@
+/*
 package org.delivery.db.userorder;
 
 import org.delivery.db.userorder.enums.UserOrderStatus;
@@ -21,3 +22,4 @@ public interface UserOrderRepository extends JpaRepository<UserOrderEntity, Long
 
     Optional<UserOrderEntity> findAllByIdAndUserId(Long id, Long userId);
 }
+*/

@@ -13,8 +13,8 @@ public class UserOrderMenuConverter {
             StoreMenuEntity storeMenuEntity
     ){
         return UserOrderMenuEntity.builder()
-                .userOrderId(userOrderEntity.getId())
-                .storeMenuId(userOrderEntity.getId())
+                .userOrder(userOrderEntity)
+                .storeMenu(storeMenuEntity)
                 .build();
     }
 }
