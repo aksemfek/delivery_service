@@ -28,7 +28,7 @@ public class SseConnectionPool implements ConnectionPoolIfs<String, UserSseConne
 
     @Override
     public void onCompletionCallback(UserSseConnection session) {
-        log.info("call back connection pool cpmpletion : {}", session);
+        log.info("call back connection pool completion : {}", session);
         connectionPool.remove(session.getUniqueKey());
     }
 }

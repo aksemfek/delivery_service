@@ -1,3 +1,4 @@
+/*
 package org.delivery.db.store;
 
 import org.delivery.db.store.enums.StoreCategory;
@@ -26,3 +27,4 @@ public interface StoreRepository extends JpaRepository<StoreEntity, Long> {
     Optional<StoreEntity> findFirstByNameAndStatusOrderByIdDesc(String name, StoreStatus status);
 
 }
+*/

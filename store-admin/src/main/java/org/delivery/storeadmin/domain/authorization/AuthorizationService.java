@@ -11,6 +11,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @RequiredArgsConstructor
 @Service
 public class AuthorizationService implements UserDetailsService {
@@ -23,9 +25,9 @@ public class AuthorizationService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         var storeUserEntity = storeUserService.getRegisterUser(username);
-        var storeEntity = storeRepository.findFirstByIdAndStatusOrderByIdDesc(
+        var storeEntity = Optional.ofNullable(storeRepository.findFirstByIdAndStatusOrderByIdDesc(
                 storeUserEntity.get().getStoreId(),
-                StoreStatus.REGISTERED
+                StoreStatus.REGISTERED)
         );
 
         return storeUserEntity.map(it -> {
