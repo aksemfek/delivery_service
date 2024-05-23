@@ -1,5 +1,6 @@
 package org.delivery.db.userordermenu;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -24,15 +25,13 @@ public class UserOrderMenuEntity extends BaseEntity {
 
     @JoinColumn(nullable = false, name = "user_order_id")
     @ManyToOne
-    private UserOrderEntity userOrder; // 1:n
-
-    @JoinColumn(nullable = false)//  name = "store_menu_id"
+    private UserOrderEntity userOrder;   // n : 1
+    @JoinColumn(nullable = false)   //, name = "store_menu_id")
     @ManyToOne
-    private StoreMenuEntity storeMenu; // 1:n
+    private StoreMenuEntity storeMenu;   // n : 1
 
     @Enumerated(EnumType.STRING)
     @Column(length = 50, nullable = false)
     private UserOrderMenuStatus status;
-
 
 }

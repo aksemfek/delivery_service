@@ -16,8 +16,9 @@ import java.util.stream.Collectors;
 public class StoreMenuConverter {
 
     public StoreMenuEntity toEntity(
-            StoreEntity storeEntity,
-            StoreMenuRegisterRequest request){
+        StoreEntity storeEntity,
+        StoreMenuRegisterRequest request
+    ){
 
         return Optional.ofNullable(request)
             .map(it ->{
@@ -54,12 +55,13 @@ public class StoreMenuConverter {
             })
             .orElseThrow(()-> new ApiException(ErrorCode.NULL_POINT));
     }
+
     public List<StoreMenuResponse> toResponse(
-            List<StoreMenuEntity> list
+        List<StoreMenuEntity> list
     ){
         return list.stream()
-                .map(it -> toResponse(it))
-                .collect(Collectors.toList());
+            .map(it -> toResponse(it))
+            .collect(Collectors.toList());
     }
 
 }

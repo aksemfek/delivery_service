@@ -1,13 +1,14 @@
 package org.delivery.common.exception
 
-import jdk.jfr.Description
 import org.delivery.common.error.ErrorCodeIfs
 
-class ApiException : RuntimeException, ApiExceptionIfs {
+class ApiException : RuntimeException, ApiExceptionIfs{
+
     override val errorCodeIfs: ErrorCodeIfs
     override val errorDescription: String
 
-    constructor(errorCodeIfs: ErrorCodeIfs) : super (errorCodeIfs.getDescription()){
+
+    constructor(errorCodeIfs: ErrorCodeIfs): super(errorCodeIfs.getDescription()){
         this.errorCodeIfs = errorCodeIfs
         this.errorDescription = errorCodeIfs.getDescription()
     }
@@ -16,7 +17,7 @@ class ApiException : RuntimeException, ApiExceptionIfs {
         errorCodeIfs: ErrorCodeIfs,
         errorCodeDescription: String,
 
-    ): super(errorCodeIfs.getDescription()){
+    ): super(errorCodeDescription){
         this.errorCodeIfs = errorCodeIfs
         this.errorDescription = errorCodeDescription
     }

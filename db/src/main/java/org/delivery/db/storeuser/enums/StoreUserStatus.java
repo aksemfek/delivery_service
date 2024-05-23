@@ -9,6 +9,5 @@ public enum StoreUserStatus {
     UNREGISTERED("해지"),
     ;
 
-
     private String description;
 }

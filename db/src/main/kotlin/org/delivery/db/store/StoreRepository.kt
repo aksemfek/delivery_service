@@ -10,7 +10,6 @@ interface StoreRepository : JpaRepository<StoreEntity, Long> {
     // select * from store where id = ? and status = ? order by id desc limit 1
     fun findFirstByIdAndStatusOrderByIdDesc(id: Long?, status: StoreStatus?): StoreEntity?
 
-
     // 유효한 스토어 리스트
     // select * from store where status = ? order by id desc
     fun findAllByStatusOrderByIdDesc(status: StoreStatus?): List<StoreEntity>
@@ -19,7 +18,7 @@ interface StoreRepository : JpaRepository<StoreEntity, Long> {
     fun findAllByStatusAndCategoryOrderByStarDesc(
         status: StoreStatus?,
         storeCategory: StoreCategory?
-    ): List<StoreEntity?>?
+    ): List<StoreEntity>
 
     // select * from store where name = ? and status = ? order by id desc limit 1
     fun findFirstByNameAndStatusOrderByIdDesc(name: String?, status: StoreStatus?): StoreEntity?

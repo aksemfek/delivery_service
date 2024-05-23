@@ -1,5 +1,5 @@
+/*
 package org.delivery.db.userorder;
-
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
@@ -15,8 +15,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @SuperBuilder
 @Entity
@@ -24,11 +24,11 @@ import java.util.List;
 public class UserOrderEntity extends BaseEntity {
 
     @Column(nullable = false)
-    private Long userId; // 1:n
+    private Long userId;    // user table 1:n
 
     @JoinColumn(nullable = false, name = "store_id")
     @ManyToOne
-    private StoreEntity store;
+    private StoreEntity store;    // store
 
     @Enumerated(EnumType.STRING)
     @Column(length = 50, nullable = false)
@@ -36,7 +36,6 @@ public class UserOrderEntity extends BaseEntity {
 
     @Column(precision = 11, scale = 4, nullable = false)
     private BigDecimal amount;
-
 
     private LocalDateTime orderedAt;
 
@@ -52,5 +51,5 @@ public class UserOrderEntity extends BaseEntity {
     @ToString.Exclude
     @JsonIgnore
     private List<UserOrderMenuEntity> userOrderMenuList;
-
 }
+*/

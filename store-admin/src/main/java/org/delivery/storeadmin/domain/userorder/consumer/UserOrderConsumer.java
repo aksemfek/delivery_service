@@ -16,7 +16,7 @@ public class UserOrderConsumer {
 
     @RabbitListener(queues = "delivery.queue")
     public void userOrderConsumer(
-            UserOrderMessage userOrderMessage
+        UserOrderMessage userOrderMessage
     ){
         log.info("message queue >> {}", userOrderMessage);
         userOrderBusiness.pushUserOrder(userOrderMessage);

@@ -10,5 +10,4 @@ public enum UserOrderMenuStatus {
         this.description = description;
     }
     private String description;
-
 }

@@ -19,7 +19,7 @@ class ObjectMapperConfig {
         // kotlin module
         val kotlinModule = KotlinModule.Builder().apply {
             withReflectionCacheSize(512)
-            configure(KotlinFeature.NullToEmptyCollection, false) // empty list -> default  null
+            configure(KotlinFeature.NullToEmptyCollection, false) // empty list . null
             configure(KotlinFeature.NullToEmptyMap, false)  // map
             configure(KotlinFeature.NullIsSameAsDefault, false)
             configure(KotlinFeature.SingletonSupport, false)

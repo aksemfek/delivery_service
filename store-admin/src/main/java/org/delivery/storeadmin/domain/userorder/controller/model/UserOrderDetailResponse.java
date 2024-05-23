@@ -15,6 +15,5 @@ import java.util.List;
 public class UserOrderDetailResponse {
 
     private UserOrderResponse userOrderResponse;
-
     private List<StoreMenuResponse> storeMenuResponseList;
 }

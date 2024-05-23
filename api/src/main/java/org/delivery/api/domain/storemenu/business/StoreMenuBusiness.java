@@ -17,15 +17,14 @@ public class StoreMenuBusiness {
 
     private final StoreMenuService storeMenuService;
     private final StoreMenuConverter storeMenuConverter;
-    private final StoreService storeService;
 
+    private final StoreService storeService;
 
     public StoreMenuResponse register(
         StoreMenuRegisterRequest request
     ){
         // req -> entity -> save -> response
         var storeEntity = storeService.getStoreWithThrow(request.getStoreId());
-
         var entity = storeMenuConverter.toEntity(storeEntity, request);
         var newEntity = storeMenuService.register(entity);
         var response = storeMenuConverter.toResponse(newEntity);

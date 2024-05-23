@@ -5,6 +5,7 @@ import org.delivery.common.api.Api;
 import org.delivery.api.domain.store.business.StoreBusiness;
 import org.delivery.api.domain.store.controller.model.StoreRegisterRequest;
 import org.delivery.api.domain.store.controller.model.StoreResponse;
+import org.delivery.common.api.Result;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

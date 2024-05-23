@@ -1,5 +1,6 @@
 package org.delivery.db.storeuser;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -37,6 +38,7 @@ public class StoreUserEntity extends BaseEntity {
     @Column(length = 50, nullable = false)
     @Enumerated(EnumType.STRING)
     private StoreUserRole role;
+
 
     private LocalDateTime registeredAt;
 
