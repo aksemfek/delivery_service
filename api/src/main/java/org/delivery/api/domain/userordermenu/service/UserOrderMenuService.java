@@ -3,7 +3,6 @@ package org.delivery.api.domain.userordermenu.service;
 import lombok.RequiredArgsConstructor;
 import org.delivery.common.error.ErrorCode;
 import org.delivery.common.exception.ApiException;
-import org.delivery.db.userorder.UserOrderEntity;
 import org.delivery.db.userordermenu.UserOrderMenuEntity;
 import org.delivery.db.userordermenu.UserOrderMenuRepository;
 import org.delivery.db.userordermenu.enums.UserOrderMenuStatus;
@@ -23,13 +22,14 @@ public class UserOrderMenuService {
     }
 
     public UserOrderMenuEntity order(
-            UserOrderMenuEntity userOrderMenuEntity
+        UserOrderMenuEntity userOrderMenuEntity
     ){
         return Optional.ofNullable(userOrderMenuEntity)
-                .map(it ->{
-                    it.setStatus(UserOrderMenuStatus.REGISTERED);
-                    return userOrderMenuRepository.save(it);
-                })
-                .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT));
+            .map(it ->{
+                it.setStatus(UserOrderMenuStatus.REGISTERED);
+                return userOrderMenuRepository.save(it);
+            })
+            .orElseThrow(() -> new ApiException(ErrorCode.NULL_POINT));
     }
+
 }

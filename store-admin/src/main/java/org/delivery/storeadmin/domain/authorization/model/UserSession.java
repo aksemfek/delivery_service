@@ -10,6 +10,9 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.persistence.Column;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
@@ -40,6 +43,7 @@ public class UserSession implements UserDetails {
     // store
     private Long storeId;
     private String storeName;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

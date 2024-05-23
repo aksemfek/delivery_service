@@ -1,15 +1,14 @@
 package org.delivery.common.api
 
-
 import org.delivery.common.error.ErrorCodeIfs
 import javax.validation.Valid
 
 data class Api<T>(
-    var result: Result? = null,
+    var result: Result?=null,
 
     @field:Valid
-    var body: T? = null
-) {
+    var body: T?=null
+){
     companion object {
 
         @JvmStatic
@@ -53,6 +52,6 @@ data class Api<T>(
                 result = Result.ERROR(errorCodeIfs, description),
             )
         }
-    }
 
+    }
 }

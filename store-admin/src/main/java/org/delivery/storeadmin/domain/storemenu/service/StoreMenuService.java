@@ -15,7 +15,9 @@ public class StoreMenuService {
     private final StoreMenuRepository storeMenuRepository;
 
     public StoreMenuEntity getStoreMenuWithThrow(Long id){
-        return Optional.ofNullable(storeMenuRepository.findFirstByIdAndStatusOrderByIdDesc(id, StoreMenuStatus.REGISTERED)
-        ).orElseThrow(()-> new RuntimeException("Store menu not found"));
+        return Optional.ofNullable(
+                storeMenuRepository.findFirstByIdAndStatusOrderByIdDesc(id, StoreMenuStatus.REGISTERED)
+            )
+            .orElseThrow(()-> new RuntimeException("Store menu not found"));
     }
 }

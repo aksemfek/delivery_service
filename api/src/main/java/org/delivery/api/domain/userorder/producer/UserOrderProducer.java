@@ -6,8 +6,8 @@ import org.delivery.common.message.model.UserOrderMessage;
 import org.delivery.db.userorder.UserOrderEntity;
 import org.springframework.stereotype.Service;
 
-@Service
 @RequiredArgsConstructor
+@Service
 public class UserOrderProducer {
 
     private final Producer producer;
@@ -21,9 +21,9 @@ public class UserOrderProducer {
 
     public void sendOrder(Long userOrderId){
         var message = UserOrderMessage.builder()
-                .userOrderId(userOrderId)
-                .build();
+            .userOrderId(userOrderId)
+            .build();
+
         producer.producer(EXCHANGE, ROUTE_KEY, message);
     }
-
 }
